@@ -4,9 +4,10 @@ var path = require('path');
 var Promise = require('promise');
 var sass = require('node-sass');
 
+exports.name = 'scss';
 exports.outputFormat = 'css';
 
-exports.compile = function (str, options) {
+exports.render = function (str, options) {
   var input = {data: str};
   Object.keys(options || {}).forEach(function (key) {
     if (key !== 'data') {
@@ -23,7 +24,7 @@ exports.compile = function (str, options) {
   };
 };
 
-exports.compileAsync = function (str, options) {
+exports.renderAsync = function (str, options) {
   var input = {data: str};
   Object.keys(options || {}).forEach(function (key) {
     if (key !== 'data') {
@@ -45,7 +46,7 @@ exports.compileAsync = function (str, options) {
   });
 };
 
-exports.compileFile = function (filename, options) {
+exports.renderFile = function (filename, options) {
   filename = path.resolve(filename);
   var input = {file: filename};
   Object.keys(options || {}).forEach(function (key) {
@@ -65,7 +66,7 @@ exports.compileFile = function (filename, options) {
   };
 };
 
-exports.compileFileAsync = function (filename, options) {
+exports.renderFileAsync = function (filename, options) {
   filename = path.resolve(filename);
   var input = {file: filename};
   Object.keys(options || {}).forEach(function (key) {

@@ -6,7 +6,7 @@
     "jstransformer"
   ],
   "dependencies": {
-    "node-sass": "^1.2.2",
+    "node-sass": "^2.1.1",
     "promise": "^6.0.1"
   },
   "scripts": {

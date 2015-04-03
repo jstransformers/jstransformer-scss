@@ -35,7 +35,7 @@ transform.renderAsync(input).then(function (res) {
   fs.writeFileSync(__dirname + '/output.css', res.body);
   assert(res.body === expected, 'output.css should equal expected.css');
   assert.deepEqual(res.dependencies, [], 'expected dependencies to be an empty array');
-  return transform.renderFile(__dirname + '/import.scss');
+  return transform.renderFileAsync(__dirname + '/import.scss');
 }).then(function (res) {
   fs.writeFileSync(__dirname + '/output.css', res.body);
   assert(res.body === expectedImport, 'output.css should equal expected-import.css');

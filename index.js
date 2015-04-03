@@ -14,11 +14,10 @@ exports.render = function (str, options) {
       input[key] = options[key];
     }
   });
-  var stats = (input.stats = input.stats || {});
-  var css = sass.renderSync(input);
+  var out = sass.renderSync(input);
   return {
-    body: css,
-    dependencies: stats.includedFiles.map(function (filename) {
+    body: out.css,
+    dependencies: out.stats.includedFiles.map(function (filename) {
       return path.resolve(filename);
     })
   };
@@ -36,13 +35,13 @@ exports.renderAsync = function (str, options) {
     input.success = resolve;
     input.error = reject;
     sass.render(input);
-  })).then(function (css) {
+  })).then(function (out) {
     return {
-      body: css,
-      dependencies: stats.includedFiles.map(function (filename) {
+      body: out.css,
+      dependencies: out.stats.includedFiles.map(function (filename) {
         return path.resolve(filename);
       })
-    };
+     };
   });
 };
 
@@ -54,11 +53,10 @@ exports.renderFile = function (filename, options) {
       input[key] = options[key];
     }
   });
-  var stats = (input.stats = input.stats || {});
-  var css = sass.renderSync(input);
+  var out = sass.renderSync(input);
   return {
-    body: css,
-    dependencies: stats.includedFiles.map(function (filename) {
+    body: out.css,
+    dependencies: out.stats.includedFiles.map(function (filename) {
       return path.resolve(filename);
     }).filter(function (name) {
       return name !== filename;
@@ -79,10 +77,10 @@ exports.renderFileAsync = function (filename, options) {
     input.success = resolve;
     input.error = reject;
     sass.render(input);
-  })).then(function (css) {
+  })).then(function (out) {
     return {
-      body: css,
-      dependencies: stats.includedFiles.map(function (filename) {
+      body: out.css,
+      dependencies: out.stats.includedFiles.map(function (filename) {
         return path.resolve(filename);
       }).filter(function (name) {
         return name !== filename;

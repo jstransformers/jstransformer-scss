@@ -12,7 +12,7 @@ exports.render = function (str, options) {
   var input = extend({}, options, {data: str});
   var out = sass.renderSync(input);
   return {
-    body: out.css.toString('utf8'),
+    body: out.css.toString(),
     dependencies: out.stats.includedFiles.map(function (filename) {
       return path.resolve(filename);
     })
@@ -28,7 +28,7 @@ exports.renderAsync = function (str, options) {
       }
 
       return fulfill({
-        body: out.css.toString('utf8'),
+        body: out.css.toString(),
         dependencies: out.stats.includedFiles.map(function (filename) {
           return path.resolve(filename);
         })

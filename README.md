@@ -1,15 +1,25 @@
 # jstransformer-scss
 
-Transform scss to css using node-sass
+[SCSS](https://www.npmjs.com/package/node-sass) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-scss/master.svg)](https://travis-ci.org/jstransformers/jstransformer-scss)
-[![Dependency Status](https://img.shields.io/gemnasium/jstransformers/jstransformer-scss.svg)](https://gemnasium.com/jstransformers/jstransformer-scss)
+[![Coverage Status](https://img.shields.io/coveralls/jstransformers/jstransformer-scss/master.svg)](https://coveralls.io/r/jstransformers/jstransformer-scss?branch=master)
+[![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-scss/master.svg)](http://david-dm.org/jstransformers/jstransformer-scss)
 [![NPM version](https://img.shields.io/npm/v/jstransformer-scss.svg)](https://www.npmjs.org/package/jstransformer-scss)
 
 ## Installation
 
     npm install jstransformer-scss
 
+## API
+
+```js
+var scss = require('jstransformer')(require('jstransformer-scss'))
+
+scss.renderFile('example.scss').body
+// => Compiled CSS.
+```
+
 ## License
 
-  MIT
+MIT

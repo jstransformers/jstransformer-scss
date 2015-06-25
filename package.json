@@ -10,8 +10,8 @@
   ],
   "dependencies": {
     "extend": "^2.0.1",
-    "node-sass": "^3.1.2",
-    "promise": "^7.0.1"
+    "node-sass": "^3.2.0",
+    "promise": "^7.0.3"
   },
   "devDependencies": {
     "test-jstransformer": "^1.0.0"

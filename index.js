@@ -3,7 +3,7 @@
 var path = require('path');
 var Promise = require('promise');
 var sass = require('node-sass');
-var extend = require('extend');
+var extend = require('extend-shallow');
 
 exports.name = 'scss';
 exports.outputFormat = 'css';

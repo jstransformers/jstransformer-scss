@@ -3,6 +3,7 @@
 ## v0.1.2: 2015-08-04
 
 - Switched from `extend` to `extend-shallow`
+- Updated dependencies
 
 ## v0.1.1: 2015-07-19
 

@@ -1,6 +1,11 @@
 {
+  "dependencies": {
+    "extend-shallow": "^2.0.1",
+    "node-sass": "^3.3.2",
+    "promise": "^7.0.4"
+  },
   "name": "jstransformer-scss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SCSS support for JSTransformers",
   "keywords": [
     "jstransformer"
@@ -8,17 +13,12 @@
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "extend-shallow": "^2.0.1",
-    "node-sass": "^3.2.0",
-    "promise": "^7.0.3"
-  },
   "devDependencies": {
     "test-jstransformer": "^1.0.0"
   },
   "scripts": {
-    "test": "test-jstransformer",
-    "coverage": "test-jstransformer coverage"
+    "coverage": "test-jstransformer coverage",
+    "test": "test-jstransformer"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.3: 2016-06-06
+
+- Updated Boilerplate
+
 ## v0.1.2: 2015-08-04
 
 - Switched from `extend` to `extend-shallow`

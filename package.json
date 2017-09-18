@@ -4,7 +4,7 @@
     "node-sass": "^4.0.0"
   },
   "name": "jstransformer-scss",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "SCSS support for JSTransformers",
   "keywords": [
     "jstransformer"

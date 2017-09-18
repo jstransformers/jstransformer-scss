@@ -15,7 +15,7 @@
 ## API
 
 ```js
-var scss = require('jstransformer')(require('jstransformer-scss'));
+var scss = require('jstransformer')(require('jstransformer-scss'))
 
 scss.renderFile('example.scss').body
 // => Compiled CSS.

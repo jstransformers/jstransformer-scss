@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "extend-shallow": "^2.0.1",
+    "extend-shallow": "^3.0.2",
     "node-sass": "^4.0.0"
   },
   "name": "jstransformer-scss",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "SCSS support for JSTransformers",
   "keywords": [
     "jstransformer"
@@ -14,12 +14,12 @@
   ],
   "devDependencies": {
     "test-jstransformer": "^1.0.0",
-    "xo": "^0.18.1"
+    "xo": "*"
   },
   "scripts": {
     "coverage": "test-jstransformer coverage",
     "test": "test-jstransformer",
-    "posttest": "xo --space --no-semicolon index.js"
+    "posttest": "xo --space=2 --no-semicolon index.js"
   },
   "engines": {
     "node": ">=4"

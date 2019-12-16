@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "extend-shallow": "^3.0.2",
-    "node-sass": "^4.0.0"
+    "sass": "^1.23.7"
   },
   "name": "jstransformer-scss",
   "version": "1.0.0",

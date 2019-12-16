@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const sass = require('node-sass')
+const sass = require('sass')
 const extend = require('extend-shallow')
 
 exports.name = 'scss'

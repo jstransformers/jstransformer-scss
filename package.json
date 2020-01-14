@@ -18,6 +18,7 @@
   },
   "scripts": {
     "test": "test-jstransformer",
+    "coverage": "test-jstransformer coverage",
     "posttest": "xo --space=2 --no-semicolon index.js"
   },
   "engines": {

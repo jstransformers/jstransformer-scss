@@ -13,7 +13,7 @@
     "index.js"
   ],
   "devDependencies": {
-    "test-jstransformer": "^1.0.0",
+    "test-jstransformer": "^1.0.3",
     "xo": "*"
   },
   "scripts": {

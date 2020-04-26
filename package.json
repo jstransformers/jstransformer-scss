@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "extend-shallow": "^3.0.2",
-    "node-sass": "^4.0.0"
+    "sass": "^1.24.4"
   },
   "name": "jstransformer-scss",
   "version": "1.0.0",
@@ -13,11 +13,12 @@
     "index.js"
   ],
   "devDependencies": {
-    "test-jstransformer": "^1.0.0",
+    "test-jstransformer": "^1.0.3",
     "xo": "*"
   },
   "scripts": {
     "test": "test-jstransformer",
+    "coverage": "test-jstransformer coverage",
     "posttest": "xo --space=2 --no-semicolon index.js"
   },
   "engines": {

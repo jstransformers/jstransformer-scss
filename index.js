@@ -1,14 +1,14 @@
 'use strict'
 
 const path = require('path')
-const sass = require('node-sass')
+const sass = require('sass')
 const extend = require('extend-shallow')
 
 exports.name = 'scss'
 exports.outputFormat = 'css'
 
-exports.render = function (str, options) {
-  const input = extend({}, options, {data: str})
+exports.render = function (inputString, options) {
+  const input = extend({}, options, {data: inputString})
   const out = sass.renderSync(input)
   return {
     body: out.css.toString(),
@@ -18,12 +18,12 @@ exports.render = function (str, options) {
   }
 }
 
-exports.renderAsync = function (str, options) {
-  const input = extend({}, options, {data: str})
+exports.renderAsync = function (inputString, options) {
+  const input = extend({}, options, {data: inputString})
   return new Promise((resolve, reject) => {
-    sass.render(input, (err, out) => {
-      if (err) {
-        return reject(err)
+    sass.render(input, (error, out) => {
+      if (error) {
+        return reject(error)
       }
 
       return resolve({
@@ -54,9 +54,9 @@ exports.renderFile = function (filename, options) {
 exports.renderFileAsync = function (filename, options) {
   const input = extend({}, options, {file: path.resolve(filename)})
   return new Promise((resolve, reject) => {
-    sass.render(input, (err, out) => {
-      if (err) {
-        return reject(err)
+    sass.render(input, (error, out) => {
+      if (error) {
+        return reject(error)
       }
 
       return resolve({

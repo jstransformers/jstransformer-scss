@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0: 2022-06-28
+
+- Move to modern SASS ([#25](https://github.com/jstransformers/jstransformer-scss/pull/25) by [@ispyhumanfly](https://github.com/ispyhumanfly))
+
 ## v1.0.0: 2017-09-18
 
 - Updated Boilerplate
